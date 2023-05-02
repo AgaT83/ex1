@@ -1,0 +1,122 @@
+@import "./colors";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	color: $white;
+	background-color: $white;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+// HEADER
+
+.header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+	&__img {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-image: url("../img/header -lg.jpg");
+		background-size: cover;
+		background-repeat: none;
+		z-index: -10;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		word-spacing: 3px;
+	}
+
+	&__span {
+		font-weight: 200;
+	}
+
+	&__sentence {
+		text-align: center;
+	}
+
+	&__btn {
+		display: block;
+		margin: 45px auto;
+		padding: 10px 40px;
+		color: $white;
+		border: 1px solid $white;
+		border-radius: 25px;
+		background: none;
+		transition: background .5s linear;
+		cursor: pointer;
+
+		&:hover {
+			background: $green;
+		}
+	}
+}
+
+.nav {
+	position: absolute;
+	top: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+
+	&__title {
+		position: absolute;
+		left: 0;
+		letter-spacing: 2px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 3px;
+			height: 3px;
+			bottom: 4px;
+			right: -4px;
+			background-color: $green;
+			border-radius: 50%;
+		}
+	}
+
+	&__links {
+		position: absolute;
+		right: 0;
+		margin-right: 40px;
+		display: block;
+	}
+
+	&__link {
+		padding: 0 20px;
+		color: $white;
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+	&__search {
+		position: absolute;
+		right: 0;
+		cursor: pointer;
+	}
+}
