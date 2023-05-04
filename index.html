@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portfolio</title>
+		<link href="./css/hamburgers.css" rel="stylesheet">
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,10 +17,21 @@
 	</head>
 	<body>
 		<header class="header">
+			<button class="hamburger hamburger--spin" type="button">
+				<span class="hamburger-box">
+				  <span class="hamburger-inner"></span>
+				</span>
+			</button>
+			
+			<nav class="nav nav-mobile">
+				<a class="nav__link" href="#home">home</a>
+					<a class="nav__link" href="#about">about</a>
+					<a class="nav__link" href="#work">work</a>
+					<a class="nav__link" href="#services">services</a>
+					<a class="nav__link" href="#blog">blog</a>
+			</nav>
+			
 			<nav class="nav nav-desktop">
-				<div class="nav__title">
-					<h4>Alecto</h4>
-				</div>
 				<div class="nav__links">
 					<a class="nav__link" href="#home">home</a>
 					<a class="nav__link" href="#about">about</a>
@@ -31,6 +43,10 @@
 					<i class="fa-solid fa-magnifying-glass"></i>
 				</div>
 			</nav>
+			
+			<div class="header__company-name">
+				<h4>Alecto</h4>
+			</div>
 
 			<div class="header__text">
 				<h1 class="header__title">
