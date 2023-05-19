@@ -10,7 +10,7 @@
 
 html {
 	scroll-behavior: smooth;
-	// overflow: hidden;
+	overflow-x: hidden;
 }
 
 body {
@@ -57,6 +57,7 @@ body {
 	}
 	&-text {
 		margin-bottom: 0 20px 20px;
+		width: 80%;
 		font-size: 12px;
 		text-align: center;
 	}
@@ -117,15 +118,8 @@ body {
 	}
 
 	&__btn {
-		// display: block;
-		// margin: 45px auto;
-		// padding: 10px 40px;
-		// color: $white;
-		border: 1px solid $white;
-		// border-radius: 25px;
 		background: none;
-		// transition: background 0.4s linear;
-		// cursor: pointer;
+		border: 1px solid $white;
 
 		&:hover {
 			background: $green;
@@ -233,11 +227,12 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		margin-bottom: 80px;
 	}
 
 	&__icon-box {
 		position: relative;
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 		height: 150px;
 		width: 150px;
 		background-color: $lightgrey;
@@ -273,9 +268,163 @@ body {
 	}
 
 	&__btn {
-		margin: 70px 0;
+		margin: 0 auto 100px;
 		background-color: $green;
 		border: none;
+	}
+}
+
+// WORK
+
+.photography {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: $lightgrey;
+	color: $darkgrey;
+
+	&__img {
+		width: 100%;
+
+		.image {
+			width: 100%;
+			object-fit: cover;
+			// background-position: center;
+			background-size: cover;
+		}
+	}
+
+	&__box {
+		padding: 30px 25px;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		font-size: 35px;
+		font-weight: lighter;
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 12px;
+		text-align: justify;
+	}
+
+	&__btn {
+		background-color: $green;
+		border: none;
+	}
+}
+
+// DESIGN
+
+.design {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: $white;
+	color: $darkgrey;
+
+	&__img {
+		width: 100%;
+
+		.image {
+			width: 100%;
+			object-fit: cover;
+			// background-position: center;
+		}
+	}
+
+	&__box {
+		padding: 30px 25px;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		font-size: 35px;
+		font-weight: lighter;
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 12px;
+		text-align: justify;
+	}
+
+	&__btn {
+		background-color: $green;
+		border: none;
+	}
+}
+
+// CEO
+
+.ceo {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 400px;
+
+	&__img {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-image: url("../img/ceo-sm.jpg");
+		background-size: cover;
+	}
+
+	&__shadow {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	&__box {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 0 25px;
+
+		img {
+			display: block;
+			margin: 40px auto;
+			height: 100px;
+			width: 100px;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+
+	&__text {
+		text-align: center;
+		font-weight: lighter;
+	}
+
+	&__cite {
+		padding-bottom: 20px;
+		font-size: 18px;
+
+		spam {
+			color: $green;
+		}
+	}
+
+	&__name {
+		font-size: 13px;
+		color: $grey;
+
+		spam {
+			font-weight: bold;
+		}
 	}
 }
 
@@ -299,6 +448,66 @@ body {
 		}
 		&__item--four {
 			flex: 50%;
+		}
+	}
+
+	.photography {
+		&__img {
+			.image {
+				height: 357px;
+			}
+		}
+	}
+	.design {
+		&__img {
+			.image {
+				height: 357px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.photography {
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		&__img {
+			flex: 50%;
+		}
+		&__box {
+			flex: 50%;
+		}
+
+		&__btn {
+			margin-left: 0;
+		}
+
+		&__title,
+		&__text,
+		&__btn {
+			text-align: left;
+		}
+	}
+	.design {
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
+
+		&__img {
+			flex: 50%;
+		}
+		&__box {
+			flex: 50%;
+		}
+
+		&__btn {
+			margin-left: 0;
+		}
+
+		&__title,
+		&__text,
+		&__btn {
+			text-align: left;
 		}
 	}
 }
@@ -326,6 +535,19 @@ body {
 		}
 		&__item--four {
 			flex: 25%;
+		}
+	}
+
+	.photography {
+		&__img,
+		&__box {
+			max-width: 600px;
+		}
+	}
+	.design {
+		&__img,
+		&__box {
+			max-width: 600px;
 		}
 	}
 }
