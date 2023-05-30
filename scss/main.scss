@@ -10,7 +10,7 @@
 
 html {
 	scroll-behavior: smooth;
-	overflow-x: hidden;
+	// overflow-x: hidden;
 }
 
 body {
@@ -21,6 +21,7 @@ body {
 
 .wrapper {
 	margin: 0 auto;
+	width: 100%;
 	max-width: 1200px;
 }
 
@@ -63,6 +64,9 @@ body {
 	}
 }
 
+.stop-scroll {
+	overflow: hidden;
+}
 // HEADER
 
 .header {
@@ -128,7 +132,7 @@ body {
 }
 
 .hamburger {
-	position: absolute;
+	position: fixed;
 	right: 10%;
 	top: 40px;
 	padding: 0;
@@ -173,6 +177,11 @@ body {
 		text-transform: uppercase;
 		text-decoration: none;
 		transform: translateX();
+		transition: color 0.2s linear;
+
+		&:hover {
+			color: $green;
+		}
 	}
 
 	&__search {
@@ -182,7 +191,7 @@ body {
 	}
 
 	&-mobile {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		height: 100%;
 		width: 100%;
@@ -203,6 +212,12 @@ body {
 	&-desktop {
 		display: none;
 	}
+}
+
+.dark-hamburger,
+.dark-hamburger::after,
+.dark-hamburger::before {
+	background-color: $darkgrey;
 }
 
 // ABOUT
@@ -1063,7 +1078,7 @@ body {
 			padding-right: 40px;
 			color: $grey;
 			text-decoration: none;
-			
+
 			&:hover {
 				color: $darkgrey;
 				font-weight: bold;
