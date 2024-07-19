@@ -24,7 +24,7 @@ const handleObserver = () => {
     const currentSection = window.scrollY;
 
     allSections.forEach(section => {
-        if(section.classList.contains('white-section') && section.offsetTop <= currentSection) {
+        if (section.classList.contains('white-section') && section.offsetTop <= currentSection) {
             burgerBars.classList.add('dark-hamburger');
         } else if (!section.classList.contains('white-section') && section.offsetTop <= currentSection){
             burgerBars.classList.remove('dark-hamburger');
